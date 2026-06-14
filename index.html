@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday, GAURI ❤️</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts: Cormorant Garamond (display) + Nunito (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Nunito:wght@300;400;600&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ============================================================
+       WELCOME / SPLASH SCREEN
+  ============================================================ -->
+  <section id="welcome-screen">
+    <div class="welcome-bg"></div>
+    <!-- Floating hearts layer (JS-generated hearts land here) -->
+    <div class="welcome-hearts" id="welcomeHearts"></div>
+
+    <div class="welcome-content">
+      <div class="welcome-sparkle-ring"></div>
+      <p class="welcome-eyebrow">A message just for you</p>
+      <h1 class="welcome-title">
+        Happy Birthday,<br />
+        <!-- ✏️ CUSTOMISE: replace with your girlfriend's name -->
+        <span class="name-highlight">Gauri</span>
+        <span class="heart-pulse">❤️</span>
+      </h1>
+      <p class="welcome-sub">Something magical awaits you…</p>
+      <button class="enter-btn" id="enterBtn">
+        <span>Open Your Gift</span>
+        <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MAIN SITE (hidden until Enter is clicked)
+  ============================================================ -->
+  <div id="main-site" class="hidden">
+
+    <!-- ── MUSIC PLAYER ──────────────────────────────────────── -->
+    <div class="music-player" id="musicPlayer">
+      <button class="music-btn" id="musicBtn" aria-label="Play music">
+        <svg class="icon-play" id="iconPlay" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        <svg class="icon-pause hidden" id="iconPause" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+      </button>
+      <span class="music-label">♪ Our Song</span>
+      <!--
+        ✏️ CUSTOMISE: Add your audio file and uncomment the line below
+      <audio id="bgMusic" loop src="music/your-song.mp3"></audio>
+      -->
+      <audio id="bgMusic" loop src="music/TUM%20HO%20TOH.mpeg"></audio>
+    </div>
+
+    <!-- ── NAV ────────────────────────────────────────────────── -->
+    <nav class="floating-nav" id="floatingNav">
+      <a href="#hero" class="nav-dot" title="Home"></a>
+      <a href="#story" class="nav-dot" title="Our Story"></a>
+      <a href="#reasons" class="nav-dot" title="Why I Love You"></a>
+      <a href="#gallery" class="nav-dot" title="Memories"></a>
+      <a href="#letter" class="nav-dot" title="Love Letter"></a>
+      <a href="#countdown" class="nav-dot" title="Countdown"></a>
+      <a href="#wishes" class="nav-dot" title="Wishes"></a>
+      <a href="#finale" class="nav-dot" title="Forever"></a>
+    </nav>
+
+    <!-- ============================================================
+         1. HERO SECTION
+    ============================================================ -->
+    <section id="hero" class="section hero-section">
+      <div class="hero-bg-gradient"></div>
+      <div class="hero-particles" id="heroParticles"></div>
+
+      <div class="hero-content fade-in-up">
+        <!-- ✏️ CUSTOMISE: Your girlfriend's name -->
+        <p class="hero-eyebrow">Today is all about you,</p>
+        <h2 class="hero-name">Gauri</h2>
+        <p class="hero-message">
+          <!-- ✏️ CUSTOMISE: Your personal birthday message -->
+          On this beautiful day, I want the whole universe to know just how much joy you bring into my life.
+          You are my sunrise, my laughter, my home.
+          <br /><br />
+          Happy Birthday, my darling. 🌸
+        </p>
+        <div class="hero-hearts-row" id="heroHeartsRow"></div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         2. OUR STORY TIMELINE
+    ============================================================ -->
+    <section id="story" class="section story-section">
+      <div class="section-header">
+        <p class="section-eyebrow">Chapter One</p>
+        <h2 class="section-title">Our Story</h2>
+        <div class="title-divider"></div>
+      </div>
+
+      <div class="timeline">
+
+        <!-- ✏️ CUSTOMISE: Replace dates, titles, descriptions and photo paths -->
+        <div class="timeline-item reveal" data-side="left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass-card">
+            <div class="timeline-photo-wrap">
+              <img src="C:\Users\piyus\OneDrive\Desktop\bday\WhatsApp Image 2026-06-12 at 2.17.23 AM.jpeg" alt="The day we met" class="timeline-photo" onerror="this.parentNode.classList.add('no-photo')" />
+              <div class="photo-placeholder">📸</div>
+            </div>
+            <div class="timeline-text">
+              <span class="timeline-date">Decn 18, 2024</span>
+              <h3 class="timeline-title">The Day We Met</h3>
+              <p>**Jya Divshi Aapan Bhetlo ❤️**
+To IMR College madhla ek normal divas hota, pan mala tevha mahiti ny hot ki ha divas mazhya ayushyat itka special honar aahe.
+College campus var mi tula pahilyanda pahila. Aajubajula khup lok hote, pan mazh laksh fakt tujhya kadech gel. Tujha to god smile baghun kahi tari veglach feeling zhala.
+Tyaveli suru zhaleli ek choti olakh, halu halu sundar aani khup khas naatyat badalli. Aaj mage valun baghitla ki vatata, IMR College madhli ti pahili bhet mazhya ayushyatil saglyat sundar goshtinpaiki ek hoti.
+Kadhi kadhi saglyat sundar premkatha ekhadyā saamanya thikanapasun suru hotat, ani aapli premkatha suru zali ti IMR College chya campus var. ❤️✨
+</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal" data-side="right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass-card">
+            <div class="timeline-photo-wrap">
+              <img src="C:\Users\piyus\OneDrive\Desktop\bday\Snapchat-1802985846.jpg" alt="First date" class="timeline-photo" onerror="this.parentNode.classList.add('no-photo')" />
+              <div class="photo-placeholder">📸</div>
+            </div>
+            <div class="timeline-text">
+              <span class="timeline-date">Dec 25, 2025</span>
+              <h3 class="timeline-title">Our First Date</h3>
+              <p>**Our First Date ❤️**
+Aapli pahili date **Dear Momos ** madhye zali, ani to divas aajhi mazhya aathvanit titkach special aahe. ☕✨
+Suruvat fakt ek casual bhet mhanun zali hoti, pan vel kasa gela kalalach nahi. Gappa, hasne ani ekmekansobat ghalavlela pratyek kshan khup sundar vatat hota.
+Tya divshi mala as vatla ki tu fakt ek special vyakti nahi, tar mazhya ayushyat khup mahatvachi honar aahes. ❤️
+Aapan ekmekansobat itke ramlo hoto ki vel sampu naye asach vatat hota. To divas, tya gappa ani tuzha hasra chehra mazhya manat nehmich rahil.
+Karan kahi aathvani fakta aathvani nastat, tya ayushyabharasathi hrudayat japun thevnyasarkhya astat. 💖✨
+*“Aapli pahili date Dear Momos Café madhye zali, pan tya divshi mazh hruday tujhya premat padla.”* ❤️🌹
+</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal" data-side="left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass-card">
+            <div class="timeline-photo-wrap">
+              <img src="C:\Users\piyus\OneDrive\Desktop\bday\WhatsApp Image 2026-06-12 at 2.25.31 AM.jpeg" alt="First trip together" class="timeline-photo" onerror="this.parentNode.classList.add('no-photo')" />
+              <div class="photo-placeholder">📸</div>
+            </div>
+            <div class="timeline-text">
+              <span class="timeline-date">July 18, 2021</span>
+              <h3 class="timeline-title">Our First Trip</h3>
+              <p>**Our First Trip ❤️**
+Aapli pahili trip mazhya sathi khup special hoti, karan ti fakt ek pravas navhati — ti aaplya naatyachi suruvat adhik sundar banavnari aathvan hoti. ✨
+Aapan doghe **Shegaon** la gelo hoto, **Shri Gajanan Maharaj** yanchya darshanala ani aaplya naatyasathi aashirwad ghenyasathi. 🙏❤️
+To pravas, tya gappa, ekmekansobat ghalavlela vel ani mandirat ekatra kelele prarthana... saglach khup khas hota. Tya divshi mala janavla ki aapla naata fakta premach nahi, tar vishwas, aadar ani devacha aashirwad yanni suddha bharlela aahe.
+Gajanan Maharajanchya charani ubhe rahun aapan aaplya sundar bhavishyachi prarthana keli, ani to kshan mazhya hrudayat nehmich japun theven. ❤️
+Aajhi Shegaonchi ti trip aathavli ki chehryavar hasu yet ani man punha tya sundar kshanamadhye harvun jat. 💖
+*“Aapli pahili trip Shegaonchi hoti, pan khari gosht mhanje to pravas don hrudayanna adhik javal gheun ala.”* ❤️🙏✨
+</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal" data-side="right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass-card">
+            <div class="timeline-photo-wrap">
+              <img src="C:\Users\piyus\OneDrive\Desktop\bday\1752445277988W.jpg" alt="The moment I knew" class="timeline-photo" onerror="this.parentNode.classList.add('no-photo')" />
+              <div class="photo-placeholder">📸</div>
+            </div>
+            <div class="timeline-text">
+              <!-- ✏️ CUSTOMISE: Add your own milestone -->
+              <span class="timeline-date">December 25, 2021</span>
+              <h3 class="timeline-title">The Moment I Knew</h3>
+              <p>**The Moment I Knew ❤️**
+Tujha hasra chehra ani dolyatli ti chamak baghun mala eka shanat kalala ki tu mazhyasathi khup special aahes.
+Tyach shani mazhya manat ek gosht pakki zali — mi tuzhya premat purnapane padlo hoto. ❤️
+*“Tujha hasu baghun mala mazh sampurna jag sapadla.”*
+ I LOVE YOU GAURII.. ✨💖
+</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         3. REASONS I LOVE YOU
+    ============================================================ -->
+    <section id="reasons" class="section reasons-section">
+      <div class="section-header">
+        <p class="section-eyebrow">From the heart</p>
+        <h2 class="section-title">Why I Love You</h2>
+        <div class="title-divider"></div>
+        <p class="section-subtitle">Tap each card to reveal a reason ✨</p>
+      </div>
+
+      <div class="reasons-grid">
+        <!-- ✏️ CUSTOMISE: Replace with your own reasons -->
+        <div class="reason-card glass-card reveal" data-reason="Your laughter is the most beautiful sound I have ever heard.">
+          <div class="reason-front"><span class="reason-number">01</span><span class="reason-icon">😂</span></div>
+          <div class="reason-back"><p>Your laughter is the most beautiful sound I have ever heard.</p></div>
+        </div>
+        <div class="reason-card glass-card reveal" data-reason="The way you care for everyone around you with such genuine warmth.">
+          <div class="reason-front"><span class="reason-number">02</span><span class="reason-icon">🫶</span></div>
+          <div class="reason-back"><p>The way you care for everyone around you with such genuine warmth.</p></div>
+        </div>
+        <div class="reason-card glass-card reveal" data-reason="Your mind — the ideas you have, the questions you ask, the way you see the world.">
+          <div class="reason-front"><span class="reason-number">03</span><span class="reason-icon">🧠</span></div>
+          <div class="reason-back"><p>Your mind — the ideas you have, the questions you ask, the way you see the world.</p></div>
+        </div>
+        <div class="reason-card glass-card reveal" data-reason="The courage you show every single day, even when it's hard.">
+          <div class="reason-front"><span class="reason-number">04</span><span class="reason-icon">💪</span></div>
+          <div class="reason-back"><p>The courage you show every single day, even when it's hard.</p></div>
+        </div>
+        <div class="reason-card glass-card reveal" data-reason="How you find magic in the ordinary — a good coffee, a sunset, a quiet morning.">
+          <div class="reason-front"><span class="reason-number">05</span><span class="reason-icon">✨</span></div>
+          <div class="reason-back"><p>How you find magic in the ordinary — a good coffee, a sunset, a quiet morning.</p></div>
+        </div>
+        <div class="reason-card glass-card reveal" data-reason="Your kindness to strangers. You make the world genuinely kinder.">
+          <div class="reason-front"><span class="reason-number">06</span><span class="reason-icon">🌸</span></div>
+          <div class="reason-back"><p>Your kindness to strangers. You make the world genuinely kinder.</p></div>
+        </div>
+        <div class="reason-card glass-card reveal" data-reason="The way you hold my hand when you know I'm nervous, without me saying a word.">
+          <div class="reason-front"><span class="reason-number">07</span><span class="reason-icon">🤝</span></div>
+          <div class="reason-back"><p>The way you hold my hand when you know I'm nervous, without me saying a word.</p></div>
+        </div>
+        <div class="reason-card glass-card reveal" data-reason="Your passion for the things you love — it's electric and contagious.">
+          <div class="reason-front"><span class="reason-number">08</span><span class="reason-icon">🔥</span></div>
+          <div class="reason-back"><p>Your passion for the things you love — it's electric and contagious.</p></div>
+        </div>
+        <div class="reason-card glass-card reveal" data-reason="How you look in the morning light, sleepy and soft and perfectly you.">
+          <div class="reason-front"><span class="reason-number">09</span><span class="reason-icon">🌅</span></div>
+          <div class="reason-back"><p>How you look in the morning light, sleepy and soft and perfectly you.</p></div>
+        </div>
+        <div class="reason-card glass-card reveal" data-reason="The way you remember the small things I've mentioned — it makes me feel truly seen.">
+          <div class="reason-front"><span class="reason-number">10</span><span class="reason-icon">💌</span></div>
+          <div class="reason-back"><p>The way you remember the small things I've mentioned — it makes me feel truly seen.</p></div>
+        </div>
+        <div class="reason-card glass-card reveal" data-reason="Your ambition. Watching you chase your dreams is my favourite thing.">
+          <div class="reason-front"><span class="reason-number">11</span><span class="reason-icon">🚀</span></div>
+          <div class="reason-back"><p>Your ambition. Watching you chase your dreams is my favourite thing.</p></div>
+        </div>
+        <div class="reason-card glass-card reveal" data-reason="The tiny dance you do when you're excited. I hope you never stop.">
+          <div class="reason-front"><span class="reason-number">12</span><span class="reason-icon">💃</span></div>
+          <div class="reason-back"><p>The tiny dance you do when you're excited. I hope you never stop.</p></div>
+        </div>
+        <div class="reason-card glass-card reveal" data-reason="How you make every ordinary Tuesday feel like an adventure.">
+          <div class="reason-front"><span class="reason-number">13</span><span class="reason-icon">🗺️</span></div>
+          <div class="reason-back"><p>How you make every ordinary Tuesday feel like an adventure.</p></div>
+        </div>
+        <div class="reason-card glass-card reveal" data-reason="Your honesty — you always say the true thing, even when it's difficult.">
+          <div class="reason-front"><span class="reason-number">14</span><span class="reason-icon">💎</span></div>
+          <div class="reason-back"><p>Your honesty — you always say the true thing, even when it's difficult.</p></div>
+        </div>
+        <div class="reason-card glass-card reveal" data-reason="The warmth of your hug. Nowhere feels safer in the entire world.">
+          <div class="reason-front"><span class="reason-number">15</span><span class="reason-icon">🤗</span></div>
+          <div class="reason-back"><p>The warmth of your hug. Nowhere feels safer in the entire world.</p></div>
+        </div>
+        <div class="reason-card glass-card reveal" data-reason="Your taste in music — you've given my life the perfect soundtrack.">
+          <div class="reason-front"><span class="reason-number">16</span><span class="reason-icon">🎵</span></div>
+          <div class="reason-back"><p>Your taste in music — you've given my life the perfect soundtrack.</p></div>
+        </div>
+        <div class="reason-card glass-card reveal" data-reason="The way your eyes light up when you talk about something you love.">
+          <div class="reason-front"><span class="reason-number">17</span><span class="reason-icon">👁️</span></div>
+          <div class="reason-back"><p>The way your eyes light up when you talk about something you love.</p></div>
+        </div>
+        <div class="reason-card glass-card reveal" data-reason="How you make me want to be better — not by asking, just by being you.">
+          <div class="reason-front"><span class="reason-number">18</span><span class="reason-icon">⭐</span></div>
+          <div class="reason-back"><p>How you make me want to be better — not by asking, just by being you.</p></div>
+        </div>
+        <div class="reason-card glass-card reveal" data-reason="Every single imperfect, beautiful thing about you that makes you, you.">
+          <div class="reason-front"><span class="reason-number">19</span><span class="reason-icon">🌺</span></div>
+          <div class="reason-back"><p>Every single imperfect, beautiful thing about you that makes you, you.</p></div>
+        </div>
+        <div class="reason-card glass-card reveal" data-reason="Simply because you exist — and I get to love you.">
+          <div class="reason-front"><span class="reason-number">20</span><span class="reason-icon">❤️</span></div>
+          <div class="reason-back"><p>Simply because you exist — and I get to love you.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         4. MEMORY GALLERY
+    ============================================================ -->
+    <section id="gallery" class="section gallery-section">
+      <div class="section-header">
+        <p class="section-eyebrow">Polaroids of us</p>
+        <h2 class="section-title">Our Memories</h2>
+        <div class="title-divider"></div>
+      </div>
+
+      <div class="gallery-grid">
+        <!-- ✏️ CUSTOMISE: Replace src with your photo paths and alt text -->
+        <div class="gallery-item reveal" data-src="photos/gallery1.jpg" data-caption="Us, always 💕">
+          <img src="C:\Users\piyus\Downloads\birthday-website\birthday-website\photos\work\WhatsApp Image 2026-06-12 at 7.42.36 PM (2).jpeg" alt="Our memory 1" onerror="this.parentNode.classList.add('no-photo')" />
+          <div class="gallery-placeholder">📷</div>
+          <div class="gallery-overlay"><span>View</span></div>
+        </div>
+        <div class="gallery-item reveal" data-src="photos/gallery2.jpg" data-caption="Golden hour ✨">
+          <img src="C:\Users\piyus\Downloads\birthday-website\birthday-website\photos\work\WhatsApp Image 2026-06-12 at 7.42.57 PM.jpeg" alt="Our memory 2" onerror="this.parentNode.classList.add('no-photo')" />
+          <div class="gallery-placeholder">📷</div>
+          <div class="gallery-overlay"><span>View</span></div>
+        </div>
+        <div class="gallery-item reveal" data-src="photos/gallery3.jpg" data-caption="Adventure day 🌄">
+          <img src="C:\Users\piyus\Downloads\birthday-website\birthday-website\photos\work\WhatsApp Image 2026-06-12 at 7.42.32 PM (3).jpeg" alt="Our memory 3" onerror="this.parentNode.classList.add('no-photo')" />
+          <div class="gallery-placeholder">📷</div>
+          <div class="gallery-overlay"><span>View</span></div>
+        </div>
+        <div class="gallery-item reveal" data-src="photos/gallery4.jpg" data-caption="That perfect day 🌸">
+          <img src="C:\Users\piyus\Downloads\birthday-website\birthday-website\photos\work\WhatsApp Image 2026-06-12 at 7.42.31 PM.jpeg" alt="Our memory 4" onerror="this.parentNode.classList.add('no-photo')" />
+          <div class="gallery-placeholder">📷</div>
+          <div class="gallery-overlay"><span>View</span></div>
+        </div>
+        <div class="gallery-item reveal" data-src="photos/gallery5.jpg" data-caption="Laughing together 😄">
+          <img src="C:\Users\piyus\Downloads\birthday-website\birthday-website\photos\work\WhatsApp Image 2026-06-12 at 7.42.44 PM (2).jpeg" alt="Our memory 5" onerror="this.parentNode.classList.add('no-photo')" />
+          <div class="gallery-placeholder">📷</div>
+          <div class="gallery-overlay"><span>View</span></div>
+        </div>
+        <div class="gallery-item reveal" data-src="photos/gallery6.jpg" data-caption="My favourite view 🥰">
+          <img src="C:\Users\piyus\Downloads\birthday-website\birthday-website\photos\work\WhatsApp Image 2026-06-12 at 7.42.44 PM.jpeg" alt="Our memory 6" onerror="this.parentNode.classList.add('no-photo')" />
+          <div class="gallery-placeholder">📷</div>
+          <div class="gallery-overlay"><span>View</span></div>
+        </div>
+      </div>
+
+      <!-- Lightbox -->
+      <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose">✕</button>
+        <button class="lightbox-prev" id="lightboxPrev">‹</button>
+        <button class="lightbox-next" id="lightboxNext">›</button>
+        <img class="lightbox-img" id="lightboxImg" src="" alt="" />
+        <p class="lightbox-caption" id="lightboxCaption"></p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         5. LOVE LETTER
+    ============================================================ -->
+    <section id="letter" class="section letter-section">
+      <div class="section-header">
+        <p class="section-eyebrow">Sealed with love</p>
+        <h2 class="section-title">A Letter For You</h2>
+        <div class="title-divider"></div>
+      </div>
+
+      <div class="envelope-wrap reveal">
+        <div class="envelope" id="envelope">
+          <div class="envelope-flap"></div>
+          <div class="envelope-body">
+            <div class="envelope-seal">❤️</div>
+          </div>
+          <div class="letter-paper" id="letterPaper">
+            <p class="letter-salutation">My Sweetheart,</p>
+            <!-- ✏️ CUSTOMISE: Replace with your own letter -->
+            <p id="typewriterText" class="letter-body"></p>
+            <!-- ✏️ CUSTOMISE: Your name -->
+            <p class="letter-sign">Forever yours,<br /><em>Your love</em> ❤️</p>
+          </div>
+        </div>
+        <button class="open-letter-btn" id="openLetterBtn">
+          Open the Envelope ✉️
+        </button>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         6. COUNTDOWN TIMER
+    ============================================================ -->
+    <section id="countdown" class="section countdown-section">
+      <div class="section-header">
+        <p class="section-eyebrow">Time is precious</p>
+        <h2 class="section-title">Days Together</h2>
+        <div class="title-divider"></div>
+      </div>
+
+      <div class="countdown-wrap reveal">
+        <!-- ✏️ CUSTOMISE: Set your anniversary or next special date in script.js (TARGET_DATE) -->
+        <p class="countdown-label">Counting down to our next adventure</p>
+        <div class="countdown-grid">
+          <div class="countdown-box glass-card">
+            <span class="count-number" id="countDays">00</span>
+            <span class="count-label">Days</span>
+          </div>
+          <div class="countdown-box glass-card">
+            <span class="count-number" id="countHours">00</span>
+            <span class="count-label">Hours</span>
+          </div>
+          <div class="countdown-box glass-card">
+            <span class="count-number" id="countMins">00</span>
+            <span class="count-label">Minutes</span>
+          </div>
+          <div class="countdown-box glass-card">
+            <span class="count-number" id="countSecs">00</span>
+            <span class="count-label">Seconds</span>
+          </div>
+        </div>
+        <div class="days-together-wrap">
+          <p class="days-together-label">We have been together for</p>
+          <!-- ✏️ CUSTOMISE: Set RELATIONSHIP_START in script.js -->
+          <p class="days-together-number" id="daysTogether">0</p>
+          <p class="days-together-unit">beautiful days 💕</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         7. SURPRISE SECTION
+    ============================================================ -->
+    <section id="surprise" class="section surprise-section">
+      <div class="section-header">
+        <p class="section-eyebrow">Psst…</p>
+        <h2 class="section-title">A Little Surprise</h2>
+        <div class="title-divider"></div>
+      </div>
+
+      <div class="surprise-wrap reveal">
+        <button class="surprise-btn" id="surpriseBtn">
+          <span class="surprise-btn-inner">Click for a Surprise ❤️</span>
+        </button>
+      </div>
+
+      <!-- Surprise Popup -->
+      <div class="popup-overlay" id="surprisePopup">
+        <div class="popup-card glass-card">
+          <button class="popup-close" id="popupClose">✕</button>
+          <div class="popup-hearts" id="popupHearts"></div>
+          <!-- ✏️ CUSTOMISE: Your surprise message -->
+          <h3 class="popup-title">You are my everything 🌙</h3>
+          <p class="popup-message">
+            Roz sakali uthlyavar mala ekach goshticha anand hoto ki, ya universe ne aaplyala ekach kahani madhye bhetavla. ❤️
+Tu fakt mazhya life cha love nahi aahes, tar tu mazh ghar aahes — jithe mala shanti, sukh ani khara anand milto. 🥰
+Happy Birthday, mazhya hrudayacha tukda. 🎂💖
+Aaj, udya ani nehmich... mazh prem fakt tuzyasathich asel.Mazi god god bayko... ❤️✨
+
+          </p>
+          <div class="popup-emoji-row">🎂 🎉 🌹 ✨ 🎁 💕</div>
+        </div>
+      </div>
+      <canvas id="confettiCanvas"></canvas>
+    </section>
+
+    <!-- ============================================================
+         8. BIRTHDAY WISHES WALL
+    ============================================================ -->
+    <section id="wishes" class="section wishes-section">
+      <div class="section-header">
+        <p class="section-eyebrow">With all my heart</p>
+        <h2 class="section-title">Birthday Wishes</h2>
+        <div class="title-divider"></div>
+      </div>
+
+      <div class="wishes-grid">
+        <!-- ✏️ CUSTOMISE: Replace with real wishes from friends/family -->
+        <div class="wish-card glass-card reveal">
+          <div class="wish-avatar">👨</div>
+          <p class="wish-text">"Happy Birthday, beta. 🎂❤️
+
+Aaj mi tumchya sobat naslo tari mazh prem ani aashirwad nehmich tujhya sobat aahet. Pratyek veles tu hasta, yash milavtos, kiwa ayushyat pudhe jatos, tevha mala tujhyaavar abhiman vatato. 🌟
+Ayushyat kahi hi zhala tari swatahvar vishwas thev. Tu khup strong aahes, ani mala mahit aahe ki tu tuzhi sagli swapna purna karshil.
+Aajcha divas anandane sajra kar. Hasa, anand ghya, ani lakshat thev ki mi nehmich tumchya sobat aahe — tumchya aathvanit, tumchya hrudayat, ani tumchya pratyek changlya kamat. ❤️
+Mazhya kadun khup sara prem ani aashirwad gauri beta.
+Happy Birthday, Mazi Ladki Sunbai... 🎂✨
+aani ho kayam tu ladki rahashil beta gaurii..
+
+– deepak Bhamre ❤️🌹
+"</p>
+          <!-- ✏️ CUSTOMISE: Name -->
+          <span class="wish-from">— Pappa 💐</span>
+        </div>
+        <div class="wish-card glass-card reveal">
+          <div class="wish-avatar">👩</div>
+          <p class="wish-text">"Happy Birthday, Gauri... 🎂❤️
+
+Tujha vaadhdivas mazhyasathi nehmich khup special asel. Tu nehmich anandi raha, nirogi raha ani ayushyat khup motha yash milav.
+Maza aashirwad nehmich tujhya sobat aahe. Khup hasa, khup anandat raha ani tuzhi sagli swapna purna hou de.
+Khup prem. ❤️
+Happy Birthday, Mazi Ladki Sunbai... 🎂✨
+
+– Rupali Bhamre 🌷
+"</p>
+          <span class="wish-from">— Mummy 🌟</span>
+        </div>
+        <div class="wish-card glass-card reveal">
+          <div class="wish-avatar">👭</div>
+          <p class="wish-text">"Happy Birthday, Sister! You are not just my sister but also my best friend. 
+            Thank you for always being there for me. Wishing you lots of happiness, success, love, and beautiful memories.
+             Have an amazing day! ❤️ 🎂❤️
+
+– Momo & Vaishii 🎉
+"</p>
+          <!-- ✏️ CUSTOMISE: Best friend's name -->
+          <span class="wish-from">— Your Best Friends Momo & vaishii 🎉</span>
+        </div>
+        <div class="wish-card glass-card reveal">
+          <div class="wish-avatar">🧑</div>
+          <p class="wish-text">"Happy Birthday Vahini! 🎂🎉
+
+Tumcha ha special divas khup anandat ani hasyat javo. Tumhala uttam aarogya, bharpur sukh ani yash milo hi ichha.
+Tumhi nehmich asach hasat raha ani tumchi sagli swapna purna hou de.
+Vaadhdivsachya hardik shubhechha! ❤️✨
+
+– Tumcha Devar chetan 😊
+"</p>
+          <span class="wish-from">— Chetan 🤍</span>
+        </div>
+        <div class="wish-card glass-card reveal">
+          <div class="wish-avatar">👩‍❤️‍👨</div>
+          <p class="wish-text">"I fall in love with you a little more every single day. Happy Birthday, my world."</p>
+          <!-- ✏️ CUSTOMISE: Your name -->
+          <span class="wish-from">— The one who loves you most ❤️</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         9. FINALE
+    ============================================================ -->
+    <section id="finale" class="section finale-section">
+      <div class="finale-stars" id="finaleStars"></div>
+      <div class="finale-content reveal">
+        <p class="finale-eyebrow">Now and always</p>
+        <!-- ✏️ CUSTOMISE: Your girlfriend's name -->
+        <h2 class="finale-title">Gauri,</h2>
+        <p class="finale-subtitle">I love you</p>
+        <div class="finale-heart-big">❤️</div>
+        <p class="finale-message">
+          <!-- ✏️ CUSTOMISE: Your final message -->
+          Not just today. Not just this year. But every day for the rest of forever.
+          Thank you for being the most beautiful part of my story.
+        </p>
+        <!-- ✏️ CUSTOMISE: Your name and a special date -->
+        <p class="finale-signature">— Always yours, <em>Piyush</em></p>
+        <div class="finale-sparks" id="finaleSparks"></div>
+      </div>
+    </section>
+
+  </div><!-- end #main-site -->
+
+  <script src="script.js"></script>
+</body>
+</html>
